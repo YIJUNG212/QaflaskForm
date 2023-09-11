@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} {% endblock %}
+{% block head %}{% endblock %}
+{% block body %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-12">
+            <h1 class="text-center">發布問答</h1>
+            <form method="POST" id="qaForm" action="#">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="請輸入標題" style="width: 100%;">
+                </div>
+          
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1"></label>
+                    <textarea class="form-control" id="content" name="content" rows="6" placeholder="請輸入內容" style="width: 100%;"></textarea>
+                </div>
+                <button class="btn btn-primary float-right">發布</button>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<script src="{{ url_for('static',filename='js/public_question.js')}}"></script>
+
+{% endblock %}

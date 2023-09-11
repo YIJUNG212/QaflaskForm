@@ -1,0 +1,57 @@
+
+.container-fluid{
+    background-color: #ccc;
+    width: 100%; /* 設定占滿父容器,也就是占滿body */
+    height:100vh;/* 沒有v,代表占滿目前的螢幕高度,但要改成100%,有V就代表占滿所以可以往下滾的高度,也就是可視高度 */
+    padding-top:20px;/* 設定占滿父容器,也就是占滿body */
+}
+
+.innerblock{
+    background-color: #fff;
+    color: #000;
+    width: 100%; /* 設定占滿父容器,也就是占滿container */
+
+    margin-left: auto;/* 設左右auto的話,會均寬 */
+    margin-right: auto;/* 設左右auto的話,會均寬 */
+    padding-top: 20px; /* 設定內邊距 */
+    padding-bottom: 10px; /* 設定內邊距 */
+   
+
+    
+}
+
+
+.question-ul {
+    list-style: none; /* 取消原本ul的清單樣式 */
+    padding: 0; /* 取消默認的內間距 */
+    margin-left:10px; /* 設定左邊的邊界距離*/
+}
+.question-ul li {
+    margin: 10px; /* 添加每个 <li> 元素之间的底部间距，根据需要调整间距大小 */
+    border: 1px solid #2b80a7; /* 添加 1 像素宽度的实线边框，颜色为黑色 (#000) */
+    padding: 2px;
+    
+}
+
+
+
+.side-question img {
+    width:40px;/*設定固定寬度 */
+    height: 40px; /*設定固定高度 */
+    max-width: 100%; /* 設定最大寬度,不超出父容器，也就是上一層標籤的大小 */
+    max-height: 100%;/* 設定最大高度,不超出父容器，也就是上一層標籤的大小 */
+    vertical-align: top;/* = =有沒有這行的效果是一樣的 */
+    
+}
+
+
+
+
+
+.question-detail {
+   
+    text-align: right; /* 文字靠右對齊 */
+    padding-right:10px ;
+    padding-bottom: 2px;
+    
+}

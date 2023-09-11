@@ -1,0 +1,71 @@
+ {% extends 'base.html' %} 
+{% block title  %}{% endblock  %}
+{% block head %}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    
+{% endblock  %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-1 col-0"></div> <!-- 左边界占据 10% 的宽度 -->
+        <div class="col-md-10 col-12">
+            <!-- 你的内容放在这里 -->
+            <div class="innerblock">
+                <ul class="question-ul">
+                    {% for question in questions %}
+                    <li>
+                        <div class="row ">
+
+                            <div class="col-md-1"> <!-- 图片所占的列 -->
+                                <div class="side-question">
+                                    <img src="{{url_for('static',filename='images/catTag.png')}}" alt="" class="img" id="img">
+                                </div>
+                            </div>
+                            <div class="col-md-11"> <!-- 标题和内容所占的列 -->
+                                <div class="question-main">
+                                    <div class="question-title"><a href="{{url_for('qa.qa_detail',qa_id=question.id)}}">{{question.title}}</a></div>
+                                    <div class="question-content">{{question.content}}</div>
+                                    <div class="question-detail">
+                                        <span class="question-author">{{question.author.username}}</span>
+                                        <span class="question-time">{{question.create_time}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+        </div>
+        <div class="col-md-1 col-0"></div> <!-- 右边界占据 10% 的宽度 -->
+    </div>
+</div>
+
+
+<!-- <div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-10">
+            <ul class="question-ul">
+                {% for question in questions %}
+                <li>
+                    <div class="side-question">
+                        <img src="{{url_for('static',filename='images/catTag.png')}}" alt="" class="img" id="img">
+                    </div>
+                    <div class="question-main">
+                        <div class="question-title"><a href="{{url_for('qa.qa_detail',qa_id=question.id)}}">{{question.title}}</a></div>
+                        <div class="question-content">{{question.content}}</div>
+                        <div class="question-detail">
+                            <span class="question-author">{{question.author.username}}</span>
+                            <span class="question-time">{{question.create_time}}</span>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock  %}
+ -->
